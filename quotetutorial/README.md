@@ -5,13 +5,13 @@ Wesite link - https://quotes.toscrape.com/
 
 ## Scraping via CSS Selectors
 
-- Getting into the shell of the scrapy for the website. First Open the terminal and type the following command:
+ Getting into the shell of the scrapy for the website. First Open the terminal and type the following command:
 ```bash
 scrapy shell "https://quotes.toscrape.com/"
 
 ```
-- This will open scrape the website and if the response is 200, the website is scraped
-- To extract the title we can type 
+ This will open scrape the website and if the response is 200, the website is scraped
+ To extract the title we can type 
 ```bash 
 > response.css("title::text")
 ```
@@ -27,7 +27,7 @@ scrapy shell "https://quotes.toscrape.com/"
 ```bash
 > response.css(".text::text").extract()
 ```
-- For id you can type the following command(The below code will not work for this website):
+ For id you can type the following command(The below code will not work for this website):
 ```bash
 > response.css("#text::text").extract()
 ```
