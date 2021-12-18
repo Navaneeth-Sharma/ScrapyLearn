@@ -15,15 +15,15 @@ scrapy shell "https://quotes.toscrape.com/"
 ```bash 
 > response.css("title::text")
 ```
-- To extract only the lists of the texts
+ To extract only the lists of the texts
 ```bash
 > response.css("title::text").extract()
 ```
-- To extract only the first item of the texts
+ To extract only the first item of the texts
 ```bash
 > response.css("title::text").extract_first()
 ```
-- To extract the Quotes for the page, Install a chrome extention (Selector Gadget)[https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb/related?hl=en]. Next click on the extention and select the text. It will return a unique class name or id name for the text. For the class name type the following command:
+ To extract the Quotes for the page, Install a chrome extention (Selector Gadget)[https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb/related?hl=en]. Next click on the extention and select the text. It will return a unique class name or id name for the text. For the class name type the following command:
 ```bash
 > response.css(".text::text").extract()
 ```
