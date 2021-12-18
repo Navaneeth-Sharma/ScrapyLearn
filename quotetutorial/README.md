@@ -23,7 +23,7 @@ scrapy shell "https://quotes.toscrape.com/"
 ```bash
 > response.css("title::text").extract_first()
 ```
- To extract the Quotes for the page, Install a chrome extention (Selector Gadget)[https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb/related?hl=en]. Next click on the extention and select the text. It will return a unique class name or id name for the text. For the class name type the following command:
+ To extract the Quotes for the page, Install a chrome extention <a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb/related?hl=en">Selector Gadget</a>. Next click on the extention and select the text. It will return a unique class name or id name for the text. For the class name type the following command:
 ```bash
 > response.css(".text::text").extract()
 ```
