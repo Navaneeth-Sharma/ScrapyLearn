@@ -1,6 +1,6 @@
 # Quote Website Scraping (Mini Project)
 
-Wesite link - (https://www.quotable.io/)[https://www.quotable.io/]
+Wesite link - (https://www.quotable.io/) [https://www.quotable.io/]
 
 
 ## Scraping via CSS Selectors
