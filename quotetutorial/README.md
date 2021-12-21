@@ -39,10 +39,13 @@ scrapy shell "https://quotes.toscrape.com/"
 ```bash
 # To extract the title we can type 
 > response.xpath("//title").extract()
+
 # To extract only the lists of the texts
 > response.xpath("//title/text()").extract()
+
 # To extract from the class name
 > response.xpath("//span[@class='text']/text()").extract()
+
 # To extract from the id name (The below code will not work for this website):
 > response.xpath("//span[@id='text']/text()").extract()
 ```
