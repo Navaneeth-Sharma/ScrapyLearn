@@ -10,7 +10,7 @@ scrapy shell "https://quotes.toscrape.com/"
  This will open scrape the website and if the response is 200, the website is scraped
 
 
-## Scraping via CSS Selectors
+### Scraping via CSS Selectors
 
 
 ```bash 
@@ -31,7 +31,7 @@ scrapy shell "https://quotes.toscrape.com/"
 > response.css("#text::text").extract()
 ```
 
-## Scraping via xpath 
+### Scraping via xpath 
 
 ```bash
 # To extract the title we can type 
@@ -48,10 +48,27 @@ scrapy shell "https://quotes.toscrape.com/"
 ```
 
 
-## A Deadly Combination Scraping via xpath and CSS Selectors
+### A Deadly Combination Scraping via xpath and CSS Selectors
 
 
 ```bash 
 #  To extract the url of the next page we can type
 > response.css("li.next a").xpath("@href").extract()
 ```
+
+## Scraping via python scripts 
+Important codes to change are in the quotes_spider.py file, items.py. Run the following command in the terminal:
+
+```bash
+> scrapy crawl quotes
+
+# To store the data in the json format, run the following command:
+> scrapy crawl quotes -o quotes.json
+
+# To store the data in the csv format, run the following command:
+> scrapy crawl quotes -o quotes.csv
+
+# To store the data in the xml format, run the following command:
+> scrapy crawl quotes -o quotes.xml
+```
+
