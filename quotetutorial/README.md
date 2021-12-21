@@ -12,25 +12,22 @@ scrapy shell "https://quotes.toscrape.com/"
 
 ## Scraping via CSS Selectors
 
- To extract the title we can type 
+
 ```bash 
+# To extract the title we can type 
 > response.css("title::text")
-```
- To extract only the lists of the texts
-```bash
+
+# To extract only the lists of the texts
 > response.css("title::text").extract()
-```
- To extract only the first item of the texts
-```bash
+
+# To extract only the first item of the texts
 > response.css("title::text").extract_first()
 > response.css("title::text")[0].extract()
 ```
  To extract the Quotes for the page, Install a chrome extention <a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb/related?hl=en">Selector Gadget</a>. Next click on the extention and select the text. It will return a unique class name or id name for the text. For the class name type the following command:
 ```bash
 > response.css(".text::text").extract()
-```
- For id you can type the following command(The below code will not work for this website):
-```bash
+# For id you can type the following command(The below code will not work for this website):
 > response.css("#text::text").extract()
 ```
 
