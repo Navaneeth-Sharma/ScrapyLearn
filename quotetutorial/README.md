@@ -36,27 +36,22 @@ scrapy shell "https://quotes.toscrape.com/"
 
 ## Scraping via xpath 
 
- To extract the title we can type 
 ```bash
+# To extract the title we can type 
 > response.xpath("//title").extract()
-```
- To extract only the lists of the texts
-```bash
+# To extract only the lists of the texts
 > response.xpath("//title/text()").extract()
-```
- To extract from the class name
-```bash
+# To extract from the class name
 > response.xpath("//span[@class='text']/text()").extract()
-```
- To extract from the id name (The below code will not work for this website):
-```bash
+# To extract from the id name (The below code will not work for this website):
 > response.xpath("//span[@id='text']/text()").extract()
 ```
 
 
 ## A Deadly Combination Scraping via xpath and CSS Selectors
 
- To extract the url of the next page we can type
+
 ```bash 
+#  To extract the url of the next page we can type
 > response.css("li.next a").xpath("@href").extract()
 ```
